@@ -8,7 +8,7 @@ class LoggerUtils {
   late Logger _logger;
 
   LoggerUtils._internal() {
-    _logger = Logger(printer: PrettyPrinter(printTime: true));
+    _logger = Logger(printer: PrettyPrinter(printTime: true,lineLength: 200,printEmojis: true));
   }
 
   static void v(dynamic message, [dynamic error, StackTrace? stackTrace]) {

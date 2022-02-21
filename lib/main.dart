@@ -1,4 +1,4 @@
 import 'package:shuqi/config/root_config.dart';
-import 'package:shuqi/page/home_page.dart';
+import 'package:shuqi/page/shu_qi_app.dart';
 
-void main() => RootConfig.runShuQiApp(HomePage());
+void main() => RootConfig.runShuQiApp(ShuQiApp());

@@ -17,8 +17,8 @@ class RootConfig {
       FlutterError.onError = (details) {
         handleError("Flutter引起的错误", details.exception, details.stack);
       };
-      ErrorWidget.builder = (detail) =>
-          CustomErrorWidget(error: detail.exception, stack: detail.stack);
+      // ErrorWidget.builder = (detail) =>
+      //     CustomErrorWidget(error: detail.exception, stack: detail.stack);
       runApp(ScreenWrapper(
         child: EasyloadingWrapper(
           child: PullRefreshWrapper(
