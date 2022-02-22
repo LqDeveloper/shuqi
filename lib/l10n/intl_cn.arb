@@ -1,1 +1,6 @@
-{}
+{
+  "@@locale" : "cn",
+  "tab_bookshelf": "书架",
+  "tab_bookstore": "书城",
+  "tab_me": "我的"
+}

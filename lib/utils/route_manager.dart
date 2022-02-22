@@ -3,7 +3,7 @@ import 'package:shuqi/page/home_page.dart';
 import 'package:flutter/material.dart';
 
 class RouterPath {
-  static const home = "/home";
+  static const home = "/";
 }
 
 class RouteManager {

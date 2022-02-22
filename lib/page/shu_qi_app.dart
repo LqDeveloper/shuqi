@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-
 import 'package:shuqi/generated/l10n.dart';
+import 'package:shuqi/model/theme_model.dart';
+
 import 'package:shuqi/utils/route_manager.dart';
 
 class ShuQiApp extends StatelessWidget {
@@ -21,8 +24,9 @@ class ShuQiApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate
       ],
-      initialRoute: RouterPath.home,
+      theme: context.watch<ThemeModel>().theme,
       onGenerateRoute: RouteManager.router.generator,
+      builder: EasyLoading.init(),
     );
   }
 }

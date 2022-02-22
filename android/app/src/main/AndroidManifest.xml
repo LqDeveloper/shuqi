@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shuqi">
    <application
-        android:label="shuqi"
+        android:label="书旗小说"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

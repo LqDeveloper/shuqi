@@ -2,10 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:shuqi/config/easyloading_wrapper.dart';
+import 'package:shuqi/config/provide_wrapper.dart';
 import 'package:shuqi/config/pull_refresh_wrapper.dart';
 import 'package:shuqi/config/screen_wrapper.dart';
-import 'package:shuqi/page/custom_error.dart';
 import 'package:shuqi/utils/logger_utils.dart';
 import 'package:shuqi/utils/sp_utils.dart';
 
@@ -17,15 +16,12 @@ class RootConfig {
       FlutterError.onError = (details) {
         handleError("Flutter引起的错误", details.exception, details.stack);
       };
-      // ErrorWidget.builder = (detail) =>
-      //     CustomErrorWidget(error: detail.exception, stack: detail.stack);
-      runApp(ScreenWrapper(
-        child: EasyloadingWrapper(
-          child: PullRefreshWrapper(
-            child: child,
-          ),
+      runApp(ProvierWrapper(
+          child: ScreenWrapper(
+        child: PullRefreshWrapper(
+          child: child,
         ),
-      ));
+      )));
     }, (Object error, StackTrace stack) {
       handleError("F未被 Flutter 捕获的错误", error, stack);
     });

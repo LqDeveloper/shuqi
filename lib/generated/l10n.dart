@@ -49,6 +49,36 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `书架`
+  String get tab_bookshelf {
+    return Intl.message(
+      '书架',
+      name: 'tab_bookshelf',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `书城`
+  String get tab_bookstore {
+    return Intl.message(
+      '书城',
+      name: 'tab_bookstore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `我的`
+  String get tab_me {
+    return Intl.message(
+      '我的',
+      name: 'tab_me',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

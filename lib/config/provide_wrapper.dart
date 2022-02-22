@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shuqi/model/global_model.dart';
 import 'package:shuqi/model/theme_model.dart';
 
 class ProvierWrapper extends StatelessWidget {
@@ -10,7 +11,10 @@ class ProvierWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => ThemeModel())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeModel()),
+        ChangeNotifierProvider(create: (_) => GlobalModel())
+      ],
       child: child,
     );
   }
