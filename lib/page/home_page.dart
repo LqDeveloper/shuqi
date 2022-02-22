@@ -87,24 +87,18 @@ class _CustomBottomNavBar extends StatelessWidget {
   }
 
   Widget _getSelectedImage(int index) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 5),
-      child: Image.asset(
-        _selectImages[index], width: 22,
-        excludeFromSemantics: true, //去除图片语义
-        gaplessPlayback: true,
-      ),
+    return Image.asset(
+      _selectImages[index], width: 22,
+      excludeFromSemantics: true, //去除图片语义
+      gaplessPlayback: true,
     );
   }
 
   Widget _getUnSelectedImage(int index) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 5),
-      child: Image.asset(
-        _unselectImages[index], width: 22,
-        excludeFromSemantics: true, //去除图片语义
-        gaplessPlayback: true,
-      ),
+    return Image.asset(
+      _unselectImages[index], width: 22,
+      excludeFromSemantics: true, //去除图片语义
+      gaplessPlayback: true,
     );
   }
 }

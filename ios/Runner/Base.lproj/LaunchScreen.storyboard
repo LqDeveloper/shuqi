@@ -20,13 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cy0-a0-Luo">
-                                <rect key="frame" x="27" y="128" width="360" height="640"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cy0-a0-Luo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="j5J-t0-8VF"/>
-                            <constraint firstItem="cy0-a0-Luo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="roD-E4-sGq"/>
+                            <constraint firstItem="cy0-a0-Luo" firstAttribute="top" secondItem="Ydg-fD-yQy" secondAttribute="bottom" id="kcS-jx-RSu"/>
+                            <constraint firstAttribute="trailing" secondItem="cy0-a0-Luo" secondAttribute="trailing" id="nl8-7i-LOH"/>
+                            <constraint firstItem="xbc-2k-c8Z" firstAttribute="top" secondItem="cy0-a0-Luo" secondAttribute="bottom" id="pMG-q9-4rn"/>
+                            <constraint firstItem="cy0-a0-Luo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xyV-G7-7pw"/>
                         </constraints>
                     </view>
                 </viewController>
