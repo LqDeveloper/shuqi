@@ -1,4 +1,5 @@
 import 'package:fluro/fluro.dart';
+import 'package:shuqi/config/screen_wrapper.dart';
 import 'package:shuqi/page/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class RouteManager {
   void addHomePage() {
     final handler = Handler(handlerFunc:
         (BuildContext? context, Map<String, List<String>> parameters) {
-      return const HomePage();
+      return const ScreenWrapper(child: HomePage());
     });
     _router.define(RouterPath.home, handler: handler);
   }

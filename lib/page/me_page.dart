@@ -10,6 +10,7 @@ class MePage extends StatefulWidget {
 class _MePageState extends State<MePage> with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Container(
       color: Colors.blue,
     );

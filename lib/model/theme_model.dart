@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shuqi/utils/SQColors.dart';
+import 'package:shuqi/utils/sq_colors.dart';
 
 class ThemeModel with ChangeNotifier {
   late ThemeData _themeData;
@@ -16,7 +16,10 @@ class ThemeModel with ChangeNotifier {
       selectedLabelStyle: const TextStyle(fontSize: 12),
       unselectedLabelStyle: const TextStyle(fontSize: 12),
       type: BottomNavigationBarType.fixed,
-
+    ),appBarTheme: AppBarTheme(
+      color: Colors.white,
+      centerTitle: true,
+      titleTextStyle:TextStyle(fontSize: 17, fontWeight: FontWeight.bold,color: SQColor.darkGray),
     ));
   }
 }

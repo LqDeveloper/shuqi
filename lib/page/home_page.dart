@@ -5,7 +5,6 @@ import 'package:shuqi/model/global_model.dart';
 import 'package:shuqi/page/book_store_page.dart';
 import 'package:shuqi/page/bookshelf_page.dart';
 import 'package:shuqi/page/me_page.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 

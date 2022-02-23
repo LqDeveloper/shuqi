@@ -10,8 +10,19 @@ class BookshelfPage extends StatefulWidget {
 class _BookshelfPageState extends State<BookshelfPage>
     with AutomaticKeepAliveClientMixin {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.red,);
+    super.build(context);
+    return Container();
   }
 
   @override

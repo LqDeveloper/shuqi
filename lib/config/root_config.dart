@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:shuqi/config/provide_wrapper.dart';
@@ -13,17 +13,28 @@ class RootConfig {
     runZonedGuarded(() async {
       WidgetsFlutterBinding.ensureInitialized();
       await initLib();
-      FlutterError.onError = (details) {
-        handleError("Flutter引起的错误", details.exception, details.stack);
-      };
+      // FlutterError.onError = (details) {
+      //   Zone.current.handleUncaughtError(details.exception, details.stack!);
+      // };
+
+      // ErrorWidget.builder = (detail) {
+      //   return Container(
+      //     color: Colors.green,
+      //     child: Text("$detail"),
+      //   );
+      // };
       runApp(ProvierWrapper(
-          child: ScreenWrapper(
-        child: PullRefreshWrapper(
-          child: child,
-        ),
+          child: PullRefreshWrapper(
+        child: child,
       )));
     }, (Object error, StackTrace stack) {
-      handleError("F未被 Flutter 捕获的错误", error, stack);
+      // if (kDebugMode) {
+      //   FlutterErrorDetails detail =
+      //       FlutterErrorDetails(exception: error, stack: stack);
+      //   FlutterError.dumpErrorToConsole(detail);
+      // } else {
+      //   //异常上报
+      // }
     });
   }
 
