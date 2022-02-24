@@ -44,6 +44,8 @@ dependencies:
   shared_preferences: ^2.0.13
   flutter_screenutil: ^5.3.1
   fluro: ^2.0.3
+  dio_cookie_manager: ^2.0.0
+  path_provider: ^2.0.9
 
 
 dev_dependencies:

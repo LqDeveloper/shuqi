@@ -6,6 +6,7 @@ import 'package:shuqi/config/provide_wrapper.dart';
 import 'package:shuqi/config/pull_refresh_wrapper.dart';
 import 'package:shuqi/config/screen_wrapper.dart';
 import 'package:shuqi/utils/logger_utils.dart';
+import 'package:shuqi/utils/netowork.dart';
 import 'package:shuqi/utils/sp_utils.dart';
 
 class RootConfig {
@@ -39,8 +40,9 @@ class RootConfig {
   }
 
   static Future initLib() async {
-    await SPUtils.initSP();
     conifgEasyLoading();
+    await SPUtils.initSP();
+    await Network.init();
   }
 
   //https://github.com/0xPool/flutter_easyloading/blob/master/README-zh_CN.md

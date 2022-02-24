@@ -10,7 +10,7 @@ class ThemeModel with ChangeNotifier {
     _themeData = ThemeData(primaryColor: SQColor.primary,bottomNavigationBarTheme: BottomNavigationBarThemeData(
       showSelectedLabels: true,
       showUnselectedLabels: true,
-      elevation: 2,
+      elevation: 5,
       selectedItemColor: SQColor.primary,
       unselectedItemColor: SQColor.gray,
       selectedLabelStyle: const TextStyle(fontSize: 12),
